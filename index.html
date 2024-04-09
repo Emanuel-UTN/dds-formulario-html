@@ -17,174 +17,182 @@
       <a href="/page2.html">Other page</a>
     </nav>
     <main>
-      <form id="formularioAfiliacion" action="#" method="post">
-        <!-- Nombre -->
-        <div class="row mb-3">
-          <label for="nombre" class="col-sm-2 col-form-label"
-            >Apellido y Nombre</label
-          >
-          <div class="col-sm-10">
-            <input type="text" id="nombre" class="form-control" required />
+      <div class="container">
+        <form id="formularioAfiliacion" action="#" method="post">
+          <!-- Nombre -->
+          <div class="row mb-3">
+            <label for="nombre" class="col-sm-2 col-form-label"
+              >Apellido y Nombre</label
+            >
+            <div class="col-sm-10">
+              <input type="text" id="nombre" class="form-control" required />
+            </div>
           </div>
-        </div>
-
-        <!-- Contraseña -->
-        <div class="row mb-3">
-          <label for="contrasena" class="col-sm-2 col-form-label"
-            >Contraseña:</label
-          >
-          <div class="col-sm-10">
-            <input
-              type="password"
-              id="contrasena"
+  
+          <!-- Contraseña -->
+          <div class="row mb-3">
+            <label for="contrasena" class="col-sm-2 col-form-label"
+              >Contraseña:</label
+            >
+            <div class="col-sm-10">
+              <input
+                type="password"
+                id="contrasena"
+                class="form-control"
+                minlength="8"
+                required
+              />
+            </div>
+          </div>
+  
+          <!-- Edad -->
+          <div class="row mb-3">
+            <label for="edad" class="col-sm-2 col-form-label">Edad:</label>
+            <div class="col-sm-2">
+              <input
+                type="number"
+                id="edad"
+                class="form-control"
+                min="18"
+                max="100"
+                required
+              />
+            </div>
+          </div>
+  
+          <!-- Fecha de Nacimiento -->
+          <div class="row mb-3">
+            <label for="fecha_nacimiento" class="col-sm-2 col-form-label"
+              >Fecha de Nacimiento:</label
+            >
+            <div class="col-sm-4">
+              <input
+                type="date"
+                id="fecha_nacimiento"
+                class="form-control"
+                required
+              />
+            </div>
+          </div>
+  
+          <!-- Género -->
+          <div class="row mb-3">
+            <label for="genero" class="col-sm-2 col-form-label">Género:</label>
+            <div class="col-sm-4">
+              <select id="genero" class="form-select" required>
+                <option value="" selected>Seleccione</option>
+                <option value="masculino">Masculino</option>
+                <option value="femenino">Femenino</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+          </div>
+  
+          <!-- Deportes -->
+          <div class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">Deportes:</legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  id="futbol"
+                  class="form-check-input"
+                  value="futbol"
+                />
+                <label for="futbol" class="form-check-label">Fútbol</label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  id="basket"
+                  class="form-check-input"
+                  value="basket"
+                />
+                <label for="basket" class="form-check-label">Basket</label>
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  id="tenis"
+                  class="form-check-input"
+                  value="tenis"
+                />
+                <label for="tenis" class="form-check-label">Tenis</label>
+              </div>
+            </div>
+          </div>
+  
+          <!-- Nivel de Experiencia -->
+          <fieldset class="row mb-3">
+            <legend class="col-form-label col-sm-2 pt-0">
+              Nivel de Experiencia:
+            </legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input
+                  type="radio"
+                  id="novato"
+                  class="form-check-input"
+                  value="principiante"
+                  name="experiencia"
+                  checked
+                />
+                <label for="principiante" class="form-check-label"
+                  >Principiante</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  id="intermedio"
+                  class="form-check-input"
+                  name="experiencia"
+                  value="intermedio"
+                />
+                <label for="intermedio" class="form-check-label"
+                  >Intermedio</label
+                >
+              </div>
+              <div class="form-check">
+                <input
+                  type="radio"
+                  id="experto"
+                  class="form-check-input"
+                  name="experiencia"
+                  value="experto"
+                />
+                <label for="experto" class="form-check-label">Experto</label>
+              </div>
+            </div>
+          </fieldset>
+  
+          <!-- Comentario -->
+          <div class="row mb-3">
+            <label for="comentario" class="col-sm-2">Comentario:</label><br />
+            <textarea
+              id="comentario"
+              name="comentario"
+              rows="4"
+              cols="50"
               class="form-control"
-              minlength="8"
               required
-            />
+            ></textarea
+            >
           </div>
-        </div>
-
-        <!-- Edad -->
-        <div class="row mb-3">
-          <label for="edad" class="col-sm-2 col-form-label">Edad:</label>
-          <div class="col-sm-2">
-            <input
-              type="number"
-              id="edad"
-              class="form-control"
-              min="18"
-              max="100"
-              required
-            />
-          </div>
-        </div>
-
-        <!-- Fecha de Nacimiento -->
-        <div class="row mb-3">
-          <label for="fecha_nacimiento" class="col-sm-2 col-form-label"
-            >Fecha de Nacimiento:</label
-          >
-          <div class="col-sm-4">
-            <input
-              type="date"
-              id="fecha_nacimiento"
-              class="form-control"
-              required
-            />
-          </div>
-        </div>
-
-        <!-- Género -->
-        <div class="row mb-3">
-          <label for="genero" class="col-sm-2 col-form-label">Género:</label>
-          <div class="col-sm-4">
-            <select id="genero" class="form-select" required>
-              <option value="" selected>Seleccione</option>
-              <option value="masculino">Masculino</option>
-              <option value="femenino">Femenino</option>
-              <option value="otro">Otro</option>
-            </select>
-          </div>
-        </div>
-
-        <!-- Deportes -->
-        <div class="row mb-3">
-          <legend class="col-form-label col-sm-2 pt-0">Deportes:</legend>
-          <div class="col-sm-10">
-            <div class="form-check">
-              <input
-                type="checkbox"
-                id="futbol"
-                class="form-check-input"
-                value="futbol"
-              />
-              <label for="futbol" class="form-check-label">Fútbol</label>
+  
+          
+          <div class="row justify-content-end">
+            <div class="col-sm-1">
+              <!-- Botón de Enviar -->
+              <button type="submit" class="btn btn-outline-primary">Enviar</button>
             </div>
-            <div class="form-check">
-              <input
-                type="checkbox"
-                id="basket"
-                class="form-check-input"
-                value="basket"
-              />
-              <label for="basket" class="form-check-label">Basket</label>
-            </div>
-            <div class="form-check">
-              <input
-                type="checkbox"
-                id="tenis"
-                class="form-check-input"
-                value="tenis"
-              />
-              <label for="tenis" class="form-check-label">Tenis</label>
+            <div class="col-sm-2">
+              <!-- Botón de Mostrar Datos -->
+              <button type="button" class="btn btn-outline-secondary" onclick="mostrarDatos()">Mostrar Datos</button>
             </div>
           </div>
-        </div>
-
-        <!-- Nivel de Experiencia -->
-        <fieldset class="row mb-3">
-          <legend class="col-form-label col-sm-2 pt-0">
-            Nivel de Experiencia:
-          </legend>
-          <div class="col-sm-10">
-            <div class="form-check">
-              <input
-                type="radio"
-                id="novato"
-                class="form-check-input"
-                value="principiante"
-                name="experiencia"
-                checked
-              />
-              <label for="principiante" class="form-check-label"
-                >Principiante</label
-              >
-            </div>
-            <div class="form-check">
-              <input
-                type="radio"
-                id="intermedio"
-                class="form-check-input"
-                name="experiencia"
-                value="intermedio"
-              />
-              <label for="intermedio" class="form-check-label"
-                >Intermedio</label
-              >
-            </div>
-            <div class="form-check">
-              <input
-                type="radio"
-                id="experto"
-                class="form-check-input"
-                name="experiencia"
-                value="experto"
-              />
-              <label for="experto" class="form-check-label">Experto</label>
-            </div>
-          </div>
-        </fieldset>
-
-        <!-- Comentario -->
-        <label for="comentario">Comentario:</label><br />
-        <textarea
-          id="comentario"
-          name="comentario"
-          rows="4"
-          cols="50"
-          required
-        ></textarea
-        ><br /><br />
-
-        
-        <div class="col-12">
-          <!-- Botón de Enviar -->
-          <button type="submit" class="btn btn-outline-primary">Enviar</button>
-
-          <!-- Botón de Mostrar Datos -->
-        <button type="button" class="btn btn-outline-secondary" onclick="mostrarDatos()">Mostrar Datos</button>
-        </div>
-      </form>
+        </form>
+      </div>
     </main>
   </body>
   <script>
